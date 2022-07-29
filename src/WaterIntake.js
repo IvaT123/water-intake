@@ -4,7 +4,7 @@ export default function WaterIntake(props) {
             <div className="position-absolute top-0 start-50 translate-middle-x ">
             <h1 >Water Intake Calculator</h1>
             <div className="input-group input-group-lg">
-                <input className="form-control" type="number" min="0"onChange={props.onChange} value={props.value}/>
+                <input disabled={props.user !=='' & props.size !== '' ? false : true}className="form-control" type="number" min="0"onChange={props.onChange} value={props.value}/>
             </div>
             {props.bottleError &&
             <div className="fs-6 text-danger">Maximum water intake per bottle is 1000ml!</div>
